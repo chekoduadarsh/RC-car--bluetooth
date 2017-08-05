@@ -5,25 +5,24 @@
 /*******************************************************************/
 
 //Buzzer / Speaker to Arduino UNO Pin 12
-  const int buzzer = 12 ;   
+  const int buzzer = 13 ;   
 //Bluetooth (HC-06 JY-MCU) State pin on pin 2 of Arduino
   const int BTState = 2;
-  const int pinfrontLights = 3;    //Pin that activates the Front lights.
-  const int pinbackLights  = 4;   //Pin that activates the Back lights.  
+  const int pinfrontLights = 11;    //Pin that activates the Front lights.
+  const int pinbackLights  = 12;   //Pin that activates the Back lights.  
 
   int state;
   int vSpeed=255;     // Default speed, from 0 to 255
 /****************************************************************/
 //Motor based on L298N motor drive module
 // motor A
-int enA = 10;
-int in1 = 9;
-int in2 = 8;
-int b = 12;
+int enA = 5;
+int in1 = 6;
+int in2 = 7;
 // motor B
-int enB = 5;
-int in3 = 6;
-int in4 = 7;
+int enB = 8;
+int in3 = 9;
+int in4 = 10;
 String readString;
 /*****************************************************************/
   void setup() {
@@ -38,8 +37,6 @@ String readString;
     pinMode(in2, OUTPUT);
     pinMode(in3, OUTPUT);
     pinMode(in4, OUTPUT);
-    pinMode(b, OUTPUT);
-    digitalWrite(b,HIGH);
  // Initialize serial communication at 9600 bits per second:
     Serial.begin(9600);
 }
